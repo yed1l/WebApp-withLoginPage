@@ -1,0 +1,19 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+body{
+    background: #fff324;
+}
+footer{
+    width: 80%;
+    margin-left: 10%;
+
+}
+div.jumbotron{
+    background: #fff211;
+}
