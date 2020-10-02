@@ -1,2 +1,2 @@
-# Will be Update
+# Will be updated
 Laravel
