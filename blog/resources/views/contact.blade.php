@@ -21,15 +21,15 @@
         @csrf
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" placeholder="Input your name" id="name" class="form-control">
+            <input  name="name" id="name" class="form-control" placeholder="Input Your Name"></input>
         </div>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="text" placeholder="Input your Email" id="email" class="form-control">
+            <input  name="email" id="email" class="form-control" placeholder="Input Your Email"></input>
         </div>
         <div class="form-group">
-            <label for="subject">Subject:</label>
-            <input type="text" placeholder="Subject" id="subject" class="form-control">
+            <label for="email">Subject:</label>
+            <input  name="subject" id="subject" class="form-control" placeholder="Input Subject"></input>
         </div>
         <div class="forum-group">
 

@@ -24,4 +24,9 @@ Route::get('/contact', function () {
 });
 
 Route::post('/contact/submit', 'ContactController@submit');
+Route::get('/contact/all', 'ContactController@all_data');
+Route::get('/contact/all/{id}', 'ContactController@Details')->name('MoreDetails');
+
+
+
 
