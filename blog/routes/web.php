@@ -24,11 +24,11 @@ Route::get('/contact', function () {
 });
 
 Route::post('/contact/submit', 'ContactController@submit');
-Route::get('/contact/all', 'ContactController@all_data');
+Route::get('/contact/all', 'ContactController@all_data')->name('AllReviews');
 Route::get('/contact/all/{id}', 'ContactController@MoreDetails')->name('MoreDetails');
 Route::get('/contact/all/{id}/update', 'ContactController@UpdateReview')->name('UpdateReview');
 Route::post('/contact/all/{id}/update', 'ContactController@UpdateReviewSubmit')->name('UpdateReviewSubmit');
-
+Route::get('/contact/all/{id}/delete', 'ContactController@DeleteReview')->name('DeleteReview');
 
 
 

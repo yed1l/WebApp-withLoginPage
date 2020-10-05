@@ -45,7 +45,14 @@ class ContactController extends Controller{
 
         $contact->save();
 
-        return redirect()->route('MoreDetails', $id)-> with('success', 'Updated');
+        return redirect()->route('MoreDetails', $id)->with('status', 'updated!');
+    }
+    public function DeleteReview($id){
+        $contact = Contact::find($id);
+        $contact->delete();
+        return redirect()->route('AllReviews', $id)-> with('success', 'Deleted');
+
+
     }
 
 
