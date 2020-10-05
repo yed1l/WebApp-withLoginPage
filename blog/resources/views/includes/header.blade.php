@@ -3,7 +3,7 @@
     <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-white" href="/">Home</a>
         <a class="p-2 text-white" href="/about">About</a>
-        <a class="p-2 text-white" href="/contact">Contact</a>
+        <a class="p-2 text-white" href="/contact">Reviews</a>
 
     </nav>
     <a class="btn btn-outline-primary" href="#">Sign up</a>

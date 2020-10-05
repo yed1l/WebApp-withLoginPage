@@ -17,7 +17,7 @@ class ContactController extends Controller{
 
         $contact->save();
 
-        return redirect()->route('glavniy')-> with('success');
+        return redirect()->route('glavniy')-> with('success', 'Saved');
     }
 
      public function all_data(){
@@ -28,6 +28,25 @@ class ContactController extends Controller{
             $contact = new Contact;
             return view('MoreDetails', ['data' => $contact->find($id)]);
       }
+
+      public function UpdateReview($id){
+          $contact = new Contact;
+          return view('UpdateReview', ['data' => $contact->find($id)]);
+
+
+      }
+    public function UpdateReviewSubmit($id, ContactRequest $req)
+    {
+        $contact = Contact::find($id);
+        $contact->name = $req->input('name');
+        $contact->email = $req->input('email');
+        $contact->subject = $req->input('subject');
+        $contact->message = $req->input('message');
+
+        $contact->save();
+
+        return redirect()->route('MoreDetails', $id)-> with('success', 'Updated');
+    }
 
 
 //            $validation = $req->validat([

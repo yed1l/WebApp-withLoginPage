@@ -1,10 +1,10 @@
 
 @extends('layouts.app')
 @section('title-block')
-    Contacts
+    Reviews
 @endsection
 @section('content')
-    <h1>Contacts</h1>
+    <h1>Reviews</h1>
 
     @if($errors->any())
         <div class="alert alert-danger">
