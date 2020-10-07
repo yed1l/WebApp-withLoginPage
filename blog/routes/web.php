@@ -20,7 +20,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact') ;
 });
 
 Route::post('/contact/submit', 'ContactController@submit');
@@ -31,4 +31,19 @@ Route::post('/contact/all/{id}/update', 'ContactController@UpdateReviewSubmit')-
 Route::get('/contact/all/{id}/delete', 'ContactController@DeleteReview')->name('DeleteReview');
 
 
+Route::get('/login', function () {
+    return view('auth.login');
+});
+Route::get('/register', function () {
+    return view('auth.register') ;
+});
+Route::get('/logout','Auth\LoginController@logout');
+Route::get('/search', 'ContactController@search');
 
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

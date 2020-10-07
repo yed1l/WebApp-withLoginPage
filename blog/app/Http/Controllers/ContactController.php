@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
 use App\Models\Contact;
+use Illuminate\Support\Facades\DB;
 
 class ContactController extends Controller{
     public function submit(ContactRequest $req)
     {
         $contact = new Contact();
         $contact->name = $req->input('name');
-        $contact->email = $req->input('email');
+//        $contact->email = $req->input('email');
         $contact->subject = $req->input('subject');
         $contact->message = $req->input('message');
 
@@ -54,11 +55,12 @@ class ContactController extends Controller{
 
 
     }
+    public function search(ContactRequest $req){
+        $search = $req->get('search');
+        $posts = DB::table('contacts')->where('subject', 'like', '%' .$search.'%')->paginate(3);
+        return view('glavniy', ['contacts' =>$posts]);
+    }
 
-
-//            $validation = $req->validat([
-//            'subject' => 'required|min:5|max:100'
-//            ]);
 
 
 

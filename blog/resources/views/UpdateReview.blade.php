@@ -22,10 +22,10 @@
             <label for="name">Name:</label>
             <input  name="name" id="name" class="form-control" value="{{$data->name}}" placeholder="Input Your Name"></input>
         </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input  name="email" id="email" class="form-control" value="{{$data->email}}" placeholder="Input Your Email"></input>
-        </div>
+{{--        <div class="form-group">--}}
+{{--            <label for="email">Email:</label>--}}
+{{--            <input  name="email" id="email" class="form-control" value="{{$data->email}}" placeholder="Input Your Email"></input>--}}
+{{--        </div>--}}
         <div class="form-group">
             <label for="email">Subject:</label>
             <input  name="subject" id="subject" class="form-control" value="{{$data->subject}}" placeholder="Input Subject"></input>
